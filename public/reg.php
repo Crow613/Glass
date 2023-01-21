@@ -1,16 +1,21 @@
 <?php
 
+
+
 require_once dirname(__DIR__) . '/vendor/autoload.php';
+
 
 use App\User;
 
-if (($_SERVER['REQUEST_METOD']?? 'GET')  === 'post') {
 
 
-    $name = $_POST['name'];
+if ($_SERVER['REQUEST_METHOD']  === 'POST') {
+   
+    $name = $_POST['name']; 
     $surname = $_POST['surname'];
     $login = $_POST['login'];
-    $email = $_POST['email'];
+    $email = filter_var($_POST['email'],FILTER_VALIDATE_EMAIL);
+    $email = filter_var($email,FILTER_SANITIZE_SPECIAL_CHARS);
     $password = $_POST['password'];
 
 

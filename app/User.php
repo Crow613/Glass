@@ -32,4 +32,20 @@ VALUES (?, ?, ?, ?, ?)");
 
     }
 
+    public function login(string $login, int|string $password){
+        $result = $this->connection->prepare("SELECT login,password FROM users WHERE login = ? ");
+
+        $result->bind_param("s", $login);
+        $result-> execute();
+        $res = $result->get_result();
+        $row = $res->fetch_assoc();
+
+        if ($row['password'] === $password){
+
+            return true;
+
+        };
+
+    }
+
 }

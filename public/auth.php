@@ -17,7 +17,7 @@
    
     <div class="row">
 
-        <form action="" method="post" class="col-10">
+        <form action="reg.php" method="post" class="col-10">
             <div class="mb-3">
                 <label for="exampleInputName" class="form-label">Name</label>
                 <input type="text" class="form-control" id="exampleInputName" name="name">
@@ -48,7 +48,7 @@
   <!--login pass-->
      
     <div class="log">
-        <form action="" method="post" class="col-2">
+        <form action="login.php" method="post" class="col-2">
     
             <div class="mb-3">
                 <label for="exampleInputlogin" class="form-label-log">login</label>
@@ -56,9 +56,9 @@
             </div>
             <div class="mb-3">
                 <label for="exampleInputPossword" class="form-label-pass">Pass</label>
-                <input type="password" class="form-control" id="exampleInputPassword" name="password">
+                <input type="password" class="form-control" id="exampleInputPassword" name="pass">
             </div>
-             <button type="submline" class="btn btn-primary">next</button>
+             <button type="submit" class="btn btn-primary">next</button>
         </form>
     </div>   
      
